@@ -1,10 +1,11 @@
 {
-  "name": "urlcanon-js",
+  "name": "urlcanon",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
     "@types/fs-extra": "^5.0.4",
+    "ava": "^1.2.0",
     "fs-extra": "^7.0.1",
     "prettier-standard": "^9.1.1",
     "snazzy": "^8.0.0",
@@ -12,11 +13,19 @@
   },
   "dependencies": {
     "big-integer": "^1.6.41",
+    "idna-uts46-hx": "^2.3.1",
     "ip-address": "^5.8.9",
     "ip-num": "^1.1.1",
     "ip-to-int": "^0.3.1",
     "ipaddr.js": "^1.8.1",
+    "punycode": "^2.1.1",
     "slice": "^1.0.0",
     "slice.js": "^1.1.1"
+  },
+  "scripts": {
+    "test": "ava tests/*.js"
+  },
+  "resolutions": {
+    "*/**/punycode": "^2.1.1"
   }
 }
